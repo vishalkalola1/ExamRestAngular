@@ -1,0 +1,48 @@
+<div class="main">
+    <div class="h1"><label class="title">Question</label></div>
+    <!-- <div *ngIf="user.error" class="error"><h3 align="center" width = "100px"><font color="red">{{user.error}}</font></h3></div> -->
+    
+    <div class='heightRadio'>
+        <input class="" type="radio" name="mode" [value]="true" [(ngModel)] = "isSingle" (change) = "radioClick()">
+        <label>Single</label>&nbsp;&nbsp;&nbsp;&nbsp;
+        <input class="" type="radio" name="mode" [value]="false" [(ngModel)] = "isSingle" (change) = "radioClick()">
+        <label>MCQ</label>
+    </div>
+    <br/>
+    <div class='heightDropDown'>
+        <select [(ngModel)]="selectedOption" class="selectWrapper">
+            <option value="-1" disabled selected>Select your option</option>
+            <option *ngFor="let exam of exams; let i = index" [value]="i+1">{{ exam.title }}</option>
+        </select>
+    </div>
+    <br/>
+    <input [(ngModel)] = "question.title" type="text" placeholder="Please question title" class="heighttext" required />
+    <br/>
+    <br/>
+    <button (click) = "submit()" type="button" class="button">Submit</button>
+</div>
+
+<div class="OptionsDiv" *ngIf="isShowDiv">
+    <div class="formDiv">
+        <input type="email" placeholder="Please enter option" class="heightform" [(ngModel)]="choice.choice" required>
+        <div class='heightDropDownForm'>
+            <select [(ngModel)]="selectedOptionTrue" class="selectWrapper" >
+                <option value="-1" disabled selected>Select your option</option>
+                <option value="0">true</option>
+                <option value="1">false</option>
+            </select>
+        </div>
+        <button (click) = "addOption()" type="button" class="buttonForm">Submit</button>
+    </div>
+
+    <div>
+        <table class="examtable">
+            <tr *ngFor="let item of choices; let i = index;" style="position: relative;background-color: rosybrown;">
+                <td style="width: 50px; text-align:center;">{{ i + 1 }}</td>
+                <td style="padding: 10px;">{{ item.choice }}</td>
+                <td style="padding: 10px;width: 70px;">{{ item.valid }}</td>
+                <!-- <td style="width: 70px;"><button (click) = "edit($event)" type="button" class="tableButtonDelete" id="{{ index }}">Edit</button></td> -->
+            </tr>
+        </table>
+    </div>
+</div>

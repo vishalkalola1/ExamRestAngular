@@ -1,0 +1,146 @@
+.heighttext {
+    display:inline-block;
+    padding:15px 10px;
+    line-height:20px;
+    width: 200px;
+    border-radius: 10px;
+    border: 2px solid black;
+    font-size: 15px;
+    margin-left: 40px;
+}
+
+.h1 {
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin-left: 33%;
+}
+
+.main {
+    width: 300px;
+    margin-left: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px red;
+    margin-top: 10px;
+    float: left;
+}
+
+.error {
+    width: 100%;
+}
+
+.register {
+    margin-left: 20%;
+}
+
+.title {
+    text-align: center;
+    font-size: 30px;
+    margin-left: 30%;
+}
+
+.selectWrapper {
+    height: 50px;
+    width: 205px;
+    font-size: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 0px;
+    outline:none;
+    background: none;
+}
+
+.heightDropDown{
+    display:inline-block;
+    border-radius: 50px;
+    border: 2px solid black;
+    overflow:hidden;
+    margin-left: 40px;
+    margin-bottom: 20px;
+}
+
+.heightRadio{
+    margin-left: 40px;
+    height: 30px;
+    width: 220px;
+}
+
+.OptionsDiv{
+    background-color: mediumblue;
+    width: 71%;
+    height: 100%;
+    margin-left: 360px;
+    margin-top: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 2px 2px 10px red;
+}
+
+.formDiv{
+    background-color:mistyrose;
+    overflow: hidden;
+    height: 70px;
+}
+
+.heightform{
+    padding:15px 10px;
+    line-height:20px;
+    width: 50%;
+    border-radius: 10px;
+    border: 2px solid black;
+    font-size: 15px;
+    margin-left: 10px;
+    float: left;
+    margin-top: 10px;
+    margin-right: 1%;
+}
+
+.heightDropDownForm{
+    border-radius: 50px;
+    border: 2px solid black;
+    overflow:hidden;
+    width: 230px;
+    background-color: white;
+    margin-top: 10px;
+    float: left;
+}
+
+.buttonForm{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 10px;
+    margin-left: 1%;
+    margin-top: 10px;
+    height: 50px;
+}
+
+.tableButtonDelete{
+    width: 70px;
+    height: 40px;
+    background-color: red;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.examtable{
+    width: 100%;
+    height: 100%;
+}

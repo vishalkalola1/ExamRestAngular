@@ -1,0 +1,15 @@
+<div class="main">
+
+<div class="h1"><h1>Login</h1></div>
+<div *ngIf="user.error" class="error"><h3 align="center" width = "100px"><font color="red">{{user.error}}</font></h3></div>
+
+<input [(ngModel)] = "user.name" type="text" placeholder="Please enter name" class="heighttext" required><br/><br/>
+<input [(ngModel)] = "user.email" type="email" placeholder="Please enter email id" class="heighttext" required><br/><br/>
+
+<button (click) = "save()" class="button"><label>Submit</label></button>
+<br/>
+<a role="button" (click)="redirect()" class="buttonforgot"> Forgot password? </a>
+<br/><br/>
+<label class="register">Create new account? <a role="button" (click)="redirect()" class="buttonregister"> Register </a> </label>
+
+</div>

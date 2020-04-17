@@ -1,0 +1,48 @@
+<div style="background-color:thistle;position: absolute;height: 100%;width: 100%;">
+<div class="header"><label class="headerlabel">Dashboard</label></div>
+<div class="main">
+    <button (click) = "examClick()" class="button"><label>Exam</label></button><br/>
+    <button (click) = "questionClick()" class="button"><label>Question</label></button><br/>
+    <button (click) = "logout()" class="button"><label>Logout</label></button><br/>
+
+    <div class="options" *ngIf="this.title == 'Question'">
+      <div style="width: 100%;margin-top: 20px;">
+        <label style="width: 100%;margin-left: 20%; font-size: 25px;">MCQ Options</label>
+      </div>
+      <table class="examtable">
+        <tr *ngFor="let item of choices; let i = index" style="position: relative;background-color: rosybrown;">
+          <td style="width: 50px; text-align:center;">{{ i + 1 }}</td>
+          <td style="padding: 10px;">{{ item.choice }}</td>
+          <td><img style="margin-left: 20px;margin-top: 5px;" [src]="item.valid ? '/assets/correctNew.png' : '/assets/wrong.png'" width="30px" height="30px" /></td>
+        </tr>
+      </table>
+    </div>
+</div>
+<div class="exambody">
+    <div class="heighttext">
+        <label class="labelTitle">{{ title }}</label>
+        <button (click) = "add()" type="button" class="addButton">Add</button>
+    </div>
+    <div *ngIf="this.title == 'Exam'">
+      <table class="examtable">
+        <tr *ngFor="let item of ItemsArray" style="position: relative;background-color: rosybrown;">
+          <td style="width: 50px; text-align:center;">{{ item.id }}</td>
+          <td style="padding: 10px;">{{ item.title }}</td>
+          <td style="width: 70px;"><button (click) = "edit($event)" type="button" class="tableButtonEdit" id="{{ item.id }}">Edit</button></td>
+          <td style="width: 70px;"><button (click) = "delete($event)" type="button" class="tableButtonDelete" id="{{ item.id }}">Delete</button></td>
+        </tr>
+      </table>
+    </div>
+
+    <div *ngIf="this.title == 'Question'">
+      <table class="examtable">
+        <tr *ngFor="let question of questions" style="position: relative;background-color: rosybrown;">
+          <td style="width: 50px; text-align:center;">{{ question.id }}</td>
+          <td style="padding: 10px;">{{ question.title }}</td>
+          <td style="width: 70px;"><button *ngIf="question.type == 'mcq'" (click) = "edit($event)" type="button" class="tableButtonViewOptions" id="{{ question.id }}">ViewOptions</button></td>
+          <td style="width: 70px;"><button (click) = "delete($event)" type="button" class="tableButtonDelete" id="{{ question.id }}">Delete</button></td>
+        </tr>
+      </table>
+    </div>
+</div>
+</div>

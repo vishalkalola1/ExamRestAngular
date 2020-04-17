@@ -1,0 +1,15 @@
+<div class="main">
+
+    <div class="h1"><h1>Register</h1></div>
+    <div *ngIf="user.error" class="error"><h3 align="center" width = "100px"><font color="red">{{user.error}}</font></h3></div>
+    <input [(ngModel)] = "user.name" type="text" placeholder="Please enter name" class="heighttext" required /><br/><br/>
+    <input [(ngModel)] = "user.email" type="email" placeholder="Please enter email id" class="heighttext" required /><br/><br/>
+    <div class='heightDropDown'>
+    <select [(ngModel)]="selectedOption" class="selectWrapper">
+        <option *ngFor="let method of contactMethods" [value]="method['id']">{{ method['label'] }}</option>
+    </select>
+    </div>
+    <br/>
+    <button (click) = "save()" class="button"><label>Submit</label></button>
+    <a role="button" (click)="redirectToLogin()" class="buttonregister"> Login </a>
+</div>

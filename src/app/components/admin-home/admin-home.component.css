@@ -1,0 +1,95 @@
+.main{
+    width: 20%;
+    min-width: 20%;
+    height: 100%;
+    float: left;
+    margin-top: 10px;
+}
+
+.header{
+    width: 100%;
+}
+
+.headerlabel{
+    height: 50px;
+    font-size: 50px;
+    margin-left: 40%;
+}
+
+button{
+    width: 100%;
+    height: 50px;
+    margin-bottom: 10px;
+    border: 0px;
+    background-color:lightslategray;
+    font-size: 15px;
+}
+
+.exambody{
+    position: absolute;
+    margin-left: 20%;
+    height: 91%;
+    width: 80%;
+    min-width: 80%;
+    max-width: 80%;
+    overflow: auto;
+}
+
+.tableButtonEdit{
+    width: 70px;
+    height: 40px;
+    background-color: green;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.tableButtonDelete{
+    width: 70px;
+    height: 40px;
+    background-color: red;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.addButton{
+    width: 100px;
+    height: 40px;
+    background-color:green;
+    margin: 10px;
+    margin-right: 20px;
+    border-radius: 10px;
+    margin-left: 88%;
+}
+
+.examtable{
+    width: 100%;
+}
+
+.heighttext{
+    position: relative;
+    width: 100%;
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.labelTitle{
+    position: absolute;
+    width: 85%;
+    text-align: center;
+    height: 40px;
+    margin: 10px;
+}
+
+.tableButtonViewOptions{
+    width: 130px;
+    height: 40px;
+    background-color: green;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.options{
+    width: 100%;
+    height: 400px;
+}

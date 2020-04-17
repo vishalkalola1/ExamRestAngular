@@ -1,0 +1,8 @@
+<div class="main">
+    <div class="h1"><label>{{ title }}</label></div>
+    <!-- <div *ngIf="user.error" class="error"><h3 align="center" width = "100px"><font color="red">{{user.error}}</font></h3></div> -->
+    <input [(ngModel)] = "exam.title" type="text" placeholder="Please exam title" class="heighttext" required />
+    <br/>
+    <br/>
+    <button (click) = "submit()" type="button" class="button">{{ buttonTitle }}</button>
+</div>
